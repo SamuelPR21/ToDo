@@ -1,0 +1,11 @@
+.btn{
+    border: none;
+    color: white;
+    padding: 14px 28 px;
+    cursor: pointer;
+    border-radius: 5 px;
+    display: inline-flex;
+}
+
+.primary {background-color: #007bff;}
+.primary:hover {background-color: #0b7dda;}
