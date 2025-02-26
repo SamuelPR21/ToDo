@@ -2,7 +2,10 @@ import "./CreateToDoBooton.css";
 
 function CreateTodoBooton({ onClick }) {
   return (
-    <button className="CreateTodoButton" onClick={onClick}>
+    <button 
+      className="button is-primary is-rounded CreateTodoButton" 
+      onClick={onClick}
+    >
       +
     </button>
   );
