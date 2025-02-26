@@ -6,14 +6,17 @@ function TodoSearch({searchValue, setSearchValue}) {
 
 
   return (
-    <input
-      placeholder="Busca  TODO"
-      className="TodoSearch"
-      value={searchValue}
-      onChange={(event) => {
-        setSearchValue(event.target.value);
-      }}
-    />
+    
+    <div className="box">
+      <input
+        placeholder="Buscar  Tarea"
+        className="TodoSearch"
+        value={searchValue}
+        onChange={(event) => {
+          setSearchValue(event.target.value);
+        }}
+      />
+    </div>
   );
 }
 

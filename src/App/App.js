@@ -12,7 +12,7 @@ const defaultTodos= [
   {text: "irse", completed: true},
   {text: "llegar", completed: false},
   {text: "estudiar", completed: true},
-  {text: "vien o gud", completed: true},
+  {text: "vien o gud", completed: false},
 
 ]
 
