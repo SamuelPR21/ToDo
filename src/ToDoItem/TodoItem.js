@@ -7,7 +7,7 @@ function TodoItem(props) {
     <li className="TodoItem box">
       <div className="field is-flex is-align-items-center">
         
-        {/* Icono de completar */}
+       
         <span 
           className={`Icon Icon-check ${props.completed && "Icon-check--active"}`} 
           onClick={props.onComplete}
@@ -15,12 +15,12 @@ function TodoItem(props) {
           <i className="fas fa-check-square"></i>
         </span>
 
-        {/* Texto de la tarea */}
+      
         <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
           {props.text}
         </p>
 
-        {/* Icono de eliminar */}
+       
         <span 
           className="Icon Icon-delete button is-danger is-light" 
           onClick={props.onDeleted}
