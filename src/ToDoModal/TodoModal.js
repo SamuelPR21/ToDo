@@ -19,7 +19,7 @@ function TodoModal({onAdd, onClose,}) {
    
       <div className="modal-background" onClick={onClose}></div>
 
-      {/* Contenedor del modal */}
+
       <div className="modal-card">
         <header className="modal-card-head">
           <p className="modal-card-title">Nueva Tarea</p>
