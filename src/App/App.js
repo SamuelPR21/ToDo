@@ -5,14 +5,12 @@ import {TodoSearch} from '../ToDoSearch/TodoSearch';
 import {TodoList} from '../ToDoList/TodoList';
 import {TodoItem} from '../ToDoItem/TodoItem';
 import {CreateTodoBooton} from '../CreateToDo/CreateTodoBooton';
+import { TodoModal } from "../ToDoModal/TodoModal"; 
 
 
 const defaultTodos= [
-  {text: "Holi", completed: true},
-  {text: "irse", completed: true},
-  {text: "llegar", completed: false},
-  {text: "estudiar", completed: true},
-  {text: "vien o gud", completed: false},
+  {text: "Entrenar", completed: false},
+  {text: "Estudiar React", completed: true},
 
 ]
 
@@ -23,6 +21,8 @@ function App() {
 
   
   const completedtodos = todos.filter(task => !!task.completed).length;
+  
+  const[isModalOpen, setIsModalOpen] = useState(false);
   
   const totalTodos = todos.length;
   
@@ -54,6 +54,12 @@ function App() {
   
   const isAllCompleted = messageTodoFinished(completedtodos, totalTodos); 
   
+
+  const addTask = (text) => {
+    const newTodos = [...todos, { text, completed: false }];
+    setTodos(newTodos);
+    setIsModalOpen(false); 
+  };
           
   return (
     <>
@@ -81,8 +87,10 @@ function App() {
         
       </TodoList>
 
-      <CreateTodoBooton/>
-
+      <CreateTodoBooton onClick={() => setIsModalOpen(true)}/>
+      
+      {isModalOpen && <TodoModal onAdd={addTask} onClose={() => setIsModalOpen(false)} />}
+    
     </>
 
   );

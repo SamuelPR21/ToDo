@@ -1,17 +1,11 @@
-import "./CreateToDoBooton.css"
+import "./CreateToDoBooton.css";
 
-function CreateTodoBooton(){
-    return(
-        <button className="CreateTodoButton"
-                onClick={
-                    (event) => {
-                            console.log("Create Todo")
-                            console.log(event)
-
-                        }
-                }
-        >+</button>
-    );
+function CreateTodoBooton({ onClick }) {
+  return (
+    <button className="CreateTodoButton" onClick={onClick}>
+      +
+    </button>
+  );
 }
 
-export {CreateTodoBooton}
+export { CreateTodoBooton };

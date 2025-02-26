@@ -7,16 +7,22 @@ function TodoSearch({searchValue, setSearchValue}) {
 
   return (
     
-    <div className="box">
-      <input
-        placeholder="Buscar  Tarea"
-        className="TodoSearch"
-        value={searchValue}
-        onChange={(event) => {
-          setSearchValue(event.target.value);
-        }}
-      />
-    </div>
+    
+      <section className="modal-card-body">
+        <header className="modal-card-head">
+          <input
+            className="input is-rounded"
+            placeholder="Buscar  Tarea"
+            value={searchValue}
+            onChange={(event) => {
+              setSearchValue(event.target.value);
+            }}
+            autoFocus
+          />
+        </header>
+      </section>
+        
+      
   );
 }
 
