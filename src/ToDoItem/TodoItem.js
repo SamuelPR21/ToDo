@@ -4,7 +4,7 @@ import "./TodoItem.css";
 
 function TodoItem(props) {
   return (
-    <li className="TodoItem box">
+    <li class="TodoItem box">
       <div className="field is-flex is-align-items-center">
         
        
